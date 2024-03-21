@@ -22,5 +22,9 @@ public:
     int count () {return cellCount;};
     bool empty();
     ostream& print(ostream& CListOutput);
+    void addCell(Cell* it);
+    void init();
+    Cell* next();
+    void remove();
 };
 inline ostream& operator << (ostream&  output, CList& c) {return c.print(output);}
