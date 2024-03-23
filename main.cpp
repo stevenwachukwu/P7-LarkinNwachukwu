@@ -8,6 +8,7 @@
 #include "column.hpp"
 #include "game.hpp"
 #include "board.hpp"
+#include "CList.hpp"
 
 //function prototypes for the program
 void UnitDice();
@@ -15,6 +16,7 @@ void UnitPlayer();
 void UnitColumn();
 void testGame(Game&);
 void unitBoard();
+void unitCList();
 //-----------------------------------------------
 int main() {
     //UnitDice();
@@ -22,9 +24,10 @@ int main() {
     //UnitColumn();
     //unitBoard();
     //Game gameclass;
-    Game gaming;
+    //Game gaming;
     //testGame(gameclass);
-    gaming.start();
+    //gaming.start();
+    unitCList();
     bye();
     return 0;
 }
@@ -94,3 +97,55 @@ void unitBoard(){
 void testGame(Game& games) {
     games.unitTest();
 } //the unit test for game
+
+void unitCList() {
+    ofstream CListNames ("CList.txt");
+
+upp test1("Jacob", ECcolor::blue);
+upp test2 ("Derek", ECcolor::green);
+upp test3 ("Olivia", ECcolor::orange);
+upp test4 ("Sadie", ECcolor::white);
+cout << "Debug" << endl;
+
+Cell* person1 = new Cell (test1);
+Cell* person2 = new Cell (test2);
+Cell* person3 = new Cell (test3);
+Cell* person4 = new Cell (test4);
+cout << "Debug" << endl;
+
+CList obj;
+obj.addCell(person1);
+obj.addCell(person2);
+obj.addCell(person3);
+obj.addCell(person4);
+cout << "Debug" << endl;
+    obj.print(CListNames);
+obj.init();
+obj.next();
+obj.remove();
+cout << "Remove 1" << endl;
+obj.remove();
+cout << "Remove 2" << endl;
+obj.remove();
+cout << "Remove 3" << endl;
+obj.remove();
+cout << "Remove 4" << endl;
+
+    obj.print(CListNames);
+
+
+obj.addCell(person1);
+obj.addCell(person2);
+obj.addCell(person3);
+obj.addCell(person4);
+cout << "Debug" << endl;
+
+obj.next();
+obj.next();
+obj.next();
+obj.next();
+cout << "Debug" << endl;
+
+obj.print(CListNames);
+cout << "Debug" << endl;
+} //the unit test for CList
