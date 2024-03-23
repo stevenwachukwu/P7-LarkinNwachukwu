@@ -1,0 +1,20 @@
+
+Player Name: Jacob
+Player's color: Blue
+Player's score: 0
+The scoreboard: 3
+
+Player Name: Derek
+Player's color: Green
+Player's score: 0
+The scoreboard: 3
+
+Player Name: Olivia
+Player's color: Orange
+Player's score: 0
+The scoreboard: 3
+
+Player Name: Sadie
+Player's color: White
+Player's score: 0
+The scoreboard: 3
