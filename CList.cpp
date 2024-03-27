@@ -6,7 +6,7 @@ CList::CList() {
     head = nullptr;
     tail = nullptr;
     currentCell = nullptr;
-}
+} //constructor for CList
 
 CList::~CList() {
     currentCell = head;
@@ -16,7 +16,7 @@ CList::~CList() {
         currentCell = temp;
         temp = temp -> next;
     }
-};
+}; //destructor for CList
 
 bool CList::empty() {
     if (cellCount == 0) {
@@ -34,6 +34,7 @@ ostream& CList::print(ostream& CListOutput) {
         temp = temp -> next;
         currentCell->wrapper.print(CListOutput);
     }
+    return CListOutput;
 }
 
 void CList::addCell(Cell *it) {
@@ -66,20 +67,18 @@ void CList::remove() {
     if (head == nullptr && tail == nullptr) {
         return;
     }
-    cout << "We're here" << endl;
     for (int i = 0; i < cellCount; i++) {
         if (cellStorage -> next == currentCell) {
             cellStorage -> next = currentCell -> next;
-            cout << "We're here 2" << endl;
-            currentCell -> wrapper.print(cout);
+            //currentCell -> wrapper.print(cout);
             delete currentCell;
-            cout << "We're here 3" << endl;
-            currentCell = cellStorage -> next;
+            currentCell = cellStorage;
+            break;
         }
       cellStorage = cellStorage -> next;
     }
     if (head == nullptr) {
-        head = currentCell;
+        head = tail -> next;
     }
     if (tail == nullptr) {
         tail = cellStorage;
