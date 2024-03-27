@@ -18,3 +18,23 @@ Player Name: Sadie
 Player's color: White
 Player's score: 0
 The scoreboard: 3
+
+Player Name: Marcus
+Player's color: Blue
+Player's score: 0
+The scoreboard: 3
+
+Player Name: Kelly
+Player's color: Green
+Player's score: 0
+The scoreboard: 3
+
+Player Name: Maria
+Player's color: Orange
+Player's score: 0
+The scoreboard: 3
+
+Player Name: Lucas
+Player's color: White
+Player's score: 0
+The scoreboard: 3
