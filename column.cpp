@@ -14,7 +14,6 @@ void Column::bust() {
 } //bust function
 bool Column::move() {
     // Check if any player has a tile in this column
-    bool playerHasTile = false;
     TowerMarker +=1;
     if (TowerMarker == columnVal[columnNum]) {
         state = Pending;
