@@ -12,8 +12,8 @@
 class Game {
 private:
     Dice* dices;
-    Player* player1;
-    Board Play;
+    Player player1;
+    Board Printer;
     void Gameroll();
     void Gamestop();
 
@@ -22,7 +22,6 @@ public:
     Game(); //the constructor for game
     ~Game(); //the destructor for game
     void getNewPlayer();
-    void unitTest();
     void oneTurn(Player* pp);
     void start();
 };
